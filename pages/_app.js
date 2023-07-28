@@ -31,7 +31,7 @@ const mena = localFont({
 function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <div className={`${mena.variable} font-sans bg-[#F5FFF3]`}>
+      <div className={`${mena.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
     </Provider>

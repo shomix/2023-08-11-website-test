@@ -20,7 +20,7 @@ This is a frontend boilerplate project that provides a solid foundation for buil
 
 To start using this boilerplate, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/quizardhq/ui-template.git`
+1. Clone the repository: `git clone https://github.com/Bonpay Finance/ui-template.git`
 2. Navigate to the project directory: `cd your-project`
 3. Install the dependencies: `npm install` or `yarn install`
 4. Start the development server: `npm run dev` or `yarn dev`

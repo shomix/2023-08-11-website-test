@@ -1,8 +1,8 @@
-# Contributing to Quizard (Frontend)
+# Contributing to Bonpay Finance Website (Frontend)
 
 <!-- Add a thank you message for new/existing contributors -->
 
-Welcome to QuizardHq! We appreciate your interest in contributing to our open-source project. Below are some guidelines to help you get started.
+Welcome to Bonpay Finance! We appreciate your interest in contributing to our open-source project. Below are some guidelines to help you get started.
 
 To get an overview of the project, look at the [README.md](README.md) file.
 
@@ -24,7 +24,7 @@ Read our [Code of Conduct](CODE_OF_CONDUCT.md) to understand how you can help ke
 
 <!-- a quick summary of the Code of Conduct -->
 
-Quizard is committed to creating a respectful, collaborative, and transparent community where individuals from different backgrounds can share their ideas without fear of harassment or discrimination. The Code of Conduct outlines the standards of behavior expected of all contributors and maintainers, including using respectful and inclusive language, accepting constructive criticism, and focusing on what is best for the community.
+Bonpay Finance is committed to creating a respectful, collaborative, and transparent community where individuals from different backgrounds can share their ideas without fear of harassment or discrimination. The Code of Conduct outlines the standards of behavior expected of all contributors and maintainers, including using respectful and inclusive language, accepting constructive criticism, and focusing on what is best for the community.
 
 Unacceptable behavior includes harassment, violence, and spreading misinformation, among other things. Project maintainers are responsible for enforcing these standards and may take corrective action when necessary. The Code of Conduct applies both within project spaces and in public spaces where individuals are representing the project or its community.
 
@@ -52,7 +52,7 @@ We use the following tools on this codebase:
 <!-- A concise guide to finding an issue on the repo -->
 <!-- Here, you can talk about the different labels on the project and what they mean. I think you should also add that if the contributor finds a new issue, they should comment on it and get approval first -->
 
-Here's a complete list of our frontend's [open issues](https://github.com/quizardhq/frontend/issues).
+Here's a complete list of our frontend's [open issues](https://github.com/bonpayfinance/website/issues).
 
 We use labels to indicate each issue's priority, status, and beginner-friendliness. Look out for some of these labels:
 
@@ -138,18 +138,16 @@ We welcome everyone to review Pull Requests, it is a great way to learn and netw
 
 # Support
 
-Do you have any questions about the source code, setting up the project, or contributing? [Join our community on Slack](https://join.slack.com/t/quizardhq/shared_invite/zt-1r9mceq39-jiXnF2o6P7foWawNODsPsQ) so we can have interesting discussions on it.
-
-You can also connect with us on Twitter and LinkedIn.
+Do you have any questions about the source code, setting up the project, or contributing? Ask codemon on discord for help.
 
 <!-- Add link to Slack Workspace here, and other means to get in touch with members of the core team, like Twitter and LinkedIn -->
 
-Thanks once again for volunteering to work on this project with us. We look forward to reviewing and merging your contributions.
+Thanks once again for your time to work on this project with us. We look forward to reviewing and merging your contributions.
 
 Have a wonderful day!
 
-Love 💚,
+Love,
 
-![Quizard Logo](components/assets/logo/logo-full.svg)
+![Bonpay Finance Logo](components/assets/logo/lightmode.svg)
 
 Frontend Team

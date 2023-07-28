@@ -19,9 +19,9 @@ export default function MetaTag({ title, description, url }) {
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@quizardHQ" />
-      <meta property="og:url" content="https://quizardhq.com" />
-      <meta name="twitter:creator" content="@quizardHQ" />
+      <meta name="twitter:site" content="@BonpayFinance" />
+      <meta property="og:url" content="https://bonpay.Finance" />
+      <meta name="twitter:creator" content="@BonpayFinance" />
 
       {/* Others */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +31,7 @@ export default function MetaTag({ title, description, url }) {
       <meta property="og:type" content="website" />
       <meta
         property="og:image:alt"
-        content="Quizard: The spellbinding game-based learning platform that makes every quiz a magical adventure!"
+        content="Bonpay Finance: Web3 Payment Gateway "
       />
       <meta property="og:locale" content="en_US" />
       <meta name="robots" content="index,follow"></meta>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GitHubIcon, MenuIcon, QuizardFullLogo } from '@/components/assets';
+import { GitHubIcon, MenuIcon, Logo } from '@/components/assets';
 import Button from '@/components/ui/atoms/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,14 +13,15 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#C4FBDD] bg-[url(/assets/noise.svg)] p-5 lg:px-32 sticky top-0 z-50">
+    <header className="bg-[#FFF] p-5 lg:px-32 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center font-medium">
         {/* Logo */}
         <Link href="/" className="h-6 lg:h-max cursor-pointer">
           <Image
-            src={QuizardFullLogo}
-            alt="Quizard logo"
+            src={Logo}
+            alt="Bonpay Finance logo"
             className="h-full w-max"
+            height={"1"}
           />
         </Link>
 
@@ -115,7 +116,7 @@ export default function Header() {
                 </li>
                 <li className="w-[100%]">
                   <a
-                    href="https://github.com/quizardhq"
+                    href="https://github.com/Bonpay Finance"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -147,37 +148,8 @@ export default function Header() {
           >
             About Us
           </Link>
-          <Link
-            href="/#features"
-            className="hover:underline hover:underline-offset-8"
-          >
-            Features
-          </Link>
-          <Link
-            href="/#faq"
-            className="hover:underline hover:underline-offset-8"
-          >
-            FAQ
-          </Link>
-          <div>
-            <Link href="/#join_waitlist">
-              <Button className="primary-btn text-[#00391B] font-medium">
-                JOIN THE WAITLIST
-              </Button>
-            </Link>
-          </div>
-          <a
-            href="https://github.com/quizardhq"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              className="border-2 p-2 rounded-md border-primary"
-              style={{ border: '1px solid #00522A' }}
-            >
-              <Image src={GitHubIcon} alt="Github" width="28" height="26" />
-            </div>
-          </a>
+         
+         
         </nav>
       </div>
     </header>

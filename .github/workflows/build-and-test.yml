@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image
-        run: docker build -t quizardhq-ui .
+        run: docker build -t Bonpay Finance-ui .

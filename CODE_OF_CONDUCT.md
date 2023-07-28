@@ -1,6 +1,6 @@
 # Contributor Code of Conduct
 
-Our project Quizard's core value is built on Trust, respect, collaboration and transparency. We believe this should live and breathe within our projects. Our community welcomes participants from around the world with different experiences, unique perspectives, and great ideas to share.
+Our project Bonpay Finance's core value is built on Trust, respect, collaboration and transparency. We believe this should live and breathe within our projects. Our community welcomes participants from around the world with different experiences, unique perspectives, and great ideas to share.
 
 # Our Pledge
 
