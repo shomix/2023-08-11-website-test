@@ -25,7 +25,7 @@ export default function MetaTag({ title, description, url }) {
 
       {/* Others */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/assets/favicon.png" type="image/png" />
+      <link rel="icon" href="/assets/" type="image/png" />
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta charSet="utf-8" />
       <meta property="og:type" content="website" />

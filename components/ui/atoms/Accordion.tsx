@@ -1,5 +1,3 @@
-import { CrossIcon } from '@/components/assets';
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface BellowProps {
@@ -23,9 +21,7 @@ export function Bellow({ title, content }: BellowProps) {
         onClick={handleClick}
       >
         <div className="flex-1">{title}</div>
-        <div className={`${isOpen ? 'rotate-45' : ''} w-6 `}>
-          <Image src={CrossIcon} alt="" className="w-full" />
-        </div>
+        <div className={`${isOpen ? 'rotate-45' : ''} w-6 `}></div>
       </button>
 
       {/* Content */}

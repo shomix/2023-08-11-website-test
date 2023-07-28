@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GitHubIcon, MenuIcon, Logo } from '@/components/assets';
+import Logo from '@/components/assets';
 import Button from '@/components/ui/atoms/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -21,23 +21,11 @@ export default function Header() {
             src={Logo}
             alt="Bonpay Finance logo"
             className="h-full w-max"
-            height={"1"}
           />
         </Link>
 
         {/* Nav */}
-        <div className="lg:hidden">
-          <Image
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') {
-                handleToggle();
-              }
-            }}
-            onClick={handleToggle}
-            src={MenuIcon}
-            alt="Hamburger Menu"
-          />
-        </div>
+        <div className="lg:hidden">=</div>
         {/* Mobile menu */}
         <AnimatePresence>
           {isOpen && (
@@ -114,28 +102,6 @@ export default function Header() {
                     </Button>
                   </Link>
                 </li>
-                <li className="w-[100%]">
-                  <a
-                    href="https://github.com/Bonpay Finance"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button
-                      className="w-[100%] mt-[1rem] text-center border-[1px] p-2 rounded-md border-primary font-normal"
-                      style={{ border: '1px solid #00522A' }}
-                      type="button"
-                    >
-                      <Image
-                        className="inline"
-                        src={GitHubIcon}
-                        alt="Github"
-                        width="28"
-                        height="26"
-                      />{' '}
-                      <span className="ml-4">Github</span>
-                    </button>
-                  </a>
-                </li>
               </ul>
             </motion.div>
           )}
@@ -148,8 +114,6 @@ export default function Header() {
           >
             About Us
           </Link>
-         
-         
         </nav>
       </div>
     </header>

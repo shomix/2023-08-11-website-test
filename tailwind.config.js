@@ -14,9 +14,6 @@ module.exports = {
       fontFamily: {
         sans: ['var(--mena-grotesk)'],
       },
-      colors: {
-        primary: '#00522A',
-      },
     },
   },
   // plugins: [require('flowbite/plugin')],
