@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--mena-grotesk)'],
+        sans: ['var(--gilroy)'],
       },
     },
   },
