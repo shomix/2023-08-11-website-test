@@ -14,7 +14,16 @@ module.exports = {
       fontFamily: {
         sans: ['var(--gilroy)'],
       },
+      colors: {
+        primary: '#6651D4',
+        neutral: '#344054',
+        'btn-primary': '#7B61FF',
+        'accordion-open': '#E4DFFF',
+      },
+      borderWidth: {
+        DEFAULT: '0.5px',
+      },
     },
   },
-  // plugins: [require('flowbite/plugin')],
+  darkMode: 'class',
 };

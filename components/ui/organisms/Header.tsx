@@ -1,121 +1,166 @@
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '@/components/assets';
-import Button from '@/components/ui/atoms/Button';
-import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Header() {
+function LoginSignUp({ visibleOnMobile }) {
+  return (
+    <div
+      className={`mt-4 md:mt-0 flex ${
+        !visibleOnMobile
+          ? 'hidden md:flex items-center gap-8'
+          : 'md:hidden flex flex-col items-start gap-6'
+      }`}
+    >
+      <Link href="/login" className="text-primary">
+        Login
+      </Link>
+      <Link href="/signup">
+        <button
+          type="button"
+          className="bg-primary text-white px-6 py-2 rounded-md"
+        >
+          Get started
+        </button>
+      </Link>
+    </div>
+  );
+}
+
+function Dropdown({ title }: { title: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <header className="bg-[#FFF] p-5 lg:px-32 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center font-medium">
-        {/* Logo */}
-        <Link href="/" className="h-6 lg:h-max cursor-pointer">
-          <Image
-            src={Logo}
-            alt="Bonpay Finance logo"
-            className="h-full w-max"
+    <div className="dropdown relative" ref={dropdownRef}>
+      <button
+        type="button"
+        className="flex items-center gap-2"
+        onClick={handleToggle}
+      >
+        <span>{title}</span>
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.6199 5.22095L7.81655 9.02428C7.36738 9.47345 6.63238 9.47345 6.18322 9.02428L2.37988 5.22095"
+            stroke="#292D32"
+            strokeWidth="1.5"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-        </Link>
+        </svg>
+      </button>
+      {isOpen && (
+        <ul className="dropdown-content bg-white absolute top-10 left-0 w-40 border border-gray-300 shadow-lg rounded z-10">
+          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
+            Option 1
+          </li>
+          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
+            Option 2
+          </li>
+          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
+            Option 3
+          </li>
+        </ul>
+      )}
+    </div>
+  );
+}
 
-        {/* Nav */}
-        <div className="lg:hidden">=</div>
-        {/* Mobile menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="bg-[#C4FBDD] bg-[url(/assets/noise.png)] fixed top-0 left-0 w-screen h-screen z-50 flex flex-col items-center justify-center"
-              initial={{ opacity: 0, x: '-100%' }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: '-100%' }}
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <nav className="p-4">
+      <div className="container mx-auto md:flex md:justify-between md:items-center max-w-7xl">
+        <div className="flex items-center justify-between">
+          <div className="text-xl text-black font-semibold">
+            <Image src={Logo} alt="logo" />
+          </div>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="text-black hover:text-gray-400 focus:outline-none"
             >
-              <button
-                type="button"
-                className="absolute top-10 p-2"
-                onClick={handleToggle}
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                className="h-6 w-6 fill-current"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
+                <path
+                  d="M3 7.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <ul className="flex flex-col items-center justify-center h-full text-xl font-normal">
-                <li className="my-5">
-                  <Link
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleToggle();
-                      }
-                    }}
-                    onClick={handleToggle}
-                    href="/#about-us"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li className="my-5 ">
-                  <Link
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleToggle();
-                      }
-                    }}
-                    onClick={handleToggle}
-                    href="/#features"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li className="my-5">
-                  <Link
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleToggle();
-                      }
-                    }}
-                    onClick={handleToggle}
-                    href="/#faq"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#join_waitlist" onClick={handleToggle}>
-                    <Button
-                      isSubmit
-                      className="primary-btn text-[#00391B] font-normal text-lg"
-                    >
-                      JOIN THE WAITLIST
-                    </Button>
-                  </Link>
-                </li>
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                />
+                <path
+                  d="M3 12.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M3 17.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible ${
+            isMenuOpen ? 'max-h-96' : 'max-h-0'
+          }
 
-        <nav className="hidden lg:flex font-medium space-x-5 items-center text-[#00210E] cursor-pointer">
-          <Link
-            href="/#about-us"
-            className="hover:underline hover:underline-offset-8"
-          >
-            About Us
-          </Link>
-        </nav>
+          `}
+        >
+          <div className="block my-4 md:my-0">
+            <Dropdown title="Product" />
+          </div>
+          <div className="block my-4 md:my-0">Pricing</div>
+          <div className="block my-4 md:my-0">
+            <Dropdown title="Developers" />
+          </div>
+          <div>
+            <Dropdown title="Support" />
+          </div>
+          <LoginSignUp visibleOnMobile />
+        </div>
+        <LoginSignUp visibleOnMobile={false} />
       </div>
-    </header>
+    </nav>
   );
 }
