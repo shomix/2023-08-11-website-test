@@ -6,19 +6,19 @@ import Logo from '@/components/assets';
 function LoginSignUp({ visibleOnMobile }) {
   return (
     <div
-      className={`mt-4 md:mt-0 flex ${
+      className={`mt-4 md:mt-0 flex text-sm ${
         !visibleOnMobile
           ? 'hidden md:flex items-center gap-8'
           : 'md:hidden flex flex-col items-start gap-6'
       }`}
     >
-      <Link href="/login" className="text-primary">
+      <Link href="/login" className="text-primary font-semibold">
         Login
       </Link>
       <Link href="/signup">
         <button
           type="button"
-          className="bg-primary text-white px-6 py-2 rounded-md"
+          className="bg-primary text-white px-6 py-2 rounded-md font-semibold"
         >
           Get started
         </button>
@@ -55,7 +55,7 @@ function Dropdown({ title }: { title: string }) {
         className="flex items-center gap-2"
         onClick={handleToggle}
       >
-        <span>{title}</span>
+        <span className="font-inter">{title}</span>
         <svg
           width="14"
           height="14"
@@ -99,7 +99,7 @@ export default function Header() {
 
   return (
     <nav className="p-4">
-      <div className="container mx-auto md:flex md:justify-between md:items-center max-w-7xl">
+      <div className="container mx-auto md:flex md:justify-between md:items-center max-w-8xl">
         <div className="flex items-center justify-between">
           <div className="text-xl text-black font-semibold">
             <Image src={Logo} alt="logo" />
@@ -141,7 +141,7 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible ${
+          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible text-sm${
             isMenuOpen ? 'max-h-96' : 'max-h-0'
           }
 

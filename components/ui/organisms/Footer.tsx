@@ -12,7 +12,7 @@ import {
 
 function FooterLinks({ links }: { links: { name: string; href: string }[] }) {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-4 text-sm font-inter">
       {links.map((link) => {
         return (
           <li key={link.name}>
@@ -29,7 +29,7 @@ function FooterLinks({ links }: { links: { name: string; href: string }[] }) {
 export default function Footer() {
   return (
     <footer className="pt-12 px-4 bg-primary">
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 max-w-7xl m-auto">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 max-w-8xl m-auto font-gilroy">
         <div className="">
           <h3 className="font-extrabold text-white mb-4">Product</h3>
           <FooterLinks
@@ -83,12 +83,12 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="col-span-2 md:col-span-1 col-start-2 text-white text-center bg-btn-primary font-medium rounded-lg text-base md:text-sm py-2.5 focus:outline-none"
+              className="col-span-2 md:col-span-1 col-start-2 text-white text-base md:text-xs text-center bg-btn-primary font-medium rounded-lg zmd:text-sm py-2.5 md:py-3.5 w-fit md:w-full m-auto px-6 focus:outline-none"
             >
               Subscribe
             </button>
           </form>
-          <p className="text-white my-6">
+          <p className="text-white my-6 text-[15px] font-inter">
             By subscribing to this form, you agree to receive marketing and
             other information from Bonpay about Bonpay Products and other
             company updates. You can unsubscribe from these communications at
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-white text-center md:text-left border-t border-[#1D2939] pt-6 max-w-7xl m-auto pb-6 mt-12">
+      <div className="text-white text-center md:text-left border-t border-[#1D2939] pt-6 max-w-8xl m-auto pb-6 mt-12 font-medium font-inter">
         &copy; {new Date().getFullYear()} Bonpay Inc. All rights reserved.
       </div>
     </footer>

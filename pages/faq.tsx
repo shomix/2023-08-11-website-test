@@ -19,10 +19,11 @@ function Accordion({ title, content }) {
     >
       <button
         className="w-full text-left items-center pt-4 pb-2 select-none flex justify-between flex-row px-6"
+        tabIndex={-1}
         onClick={toggleExpanded}
         type="button"
       >
-        <h5 className="flex-1 font-medium">{title}</h5>
+        <h5 className="flex-1 font-bold font-inter">{title}</h5>
         <div className="flex-none pl-2">
           {expanded ? (
             <Image src={MinusCircle} alt="close icon" />
@@ -36,7 +37,7 @@ function Accordion({ title, content }) {
           expanded ? 'max-h-60' : 'max-h-0'
         }`}
       >
-        <p className="pb-4 text-left text-neutral">{content}</p>
+        <p className="pb-4 text-left text-neutral font-inter">{content}</p>
       </div>
     </div>
   );
@@ -46,10 +47,10 @@ export default function Faq() {
   return (
     <HomeLayout>
       <div className="flex flex-col items-center justify-center py-20 bg-[url('/faq-hero-bg-1.svg'),_url('/faq-hero-bg-2.svg')] bg-[position:_right_0px_bottom_-7px,_right_0px_bottom_0px] bg-no-repeat">
-        <h1 className=" text-4xl md:text-5xl font-bold text-center">
+        <h1 className=" text-4xl md:text-5xl font-bold font-gilroy text-center">
           Frequently Asked Questions
         </h1>
-        <p className="text-center text-neutral mt-4 text-base md:text-xl">
+        <p className="text-center text-neutral mt-4 text-base md:text-xl font-inter">
           Everything you need to know about BonPay
         </p>
         <div className="relative w-[95%] max-w-lg mt-4">
@@ -136,20 +137,20 @@ export default function Faq() {
             />
           </div>
         </section>
-        <div className="md:bg-[url('/contact-card-cape.svg')] bg-primary bg-blend-multiply bg-no-repeat bg-cover mb-12 lg:mb-32 mt-6 lg:mt-16 w-[95%] max-w-7xl mx-auto flex flex-col items-center gap-3 rounded-md py-12 px-2">
+        <div className="md:bg-[url('/contact-card-cape.svg')] bg-primary bg-blend-multiply bg-no-repeat bg-cover mb-12 lg:mb-32 mt-6 lg:mt-16 w-[95%] max-w-8xl mx-auto flex flex-col items-center gap-3 rounded-md py-12 px-2 font-inter">
           <Image src={Messages} alt="messages" />
           <div>
-            <h2 className="text-center text-white text-2xl font-semibold my-2">
+            <h2 className="text-center text-white text-2xl font-semibold my-2 font-gilroy">
               Still have questions?
             </h2>
-            <p className="text-center text-white text-lg pb-4 max-w-3xl">
+            <p className="text-center text-white text-base md:text-sm pb-4 max-w-xl">
               If you're unable to find the answer you're seeking, please feel
               free to chat with our friendly team for further assistance.
             </p>
           </div>
           <button
             type="button"
-            className="bg-white text-primary font-medium text-lg py-2 px-6 rounded-md mx-auto block"
+            className="bg-white text-primary text-sm font-medium py-3 px-16 rounded-md mx-auto block"
           >
             Contact us
           </button>

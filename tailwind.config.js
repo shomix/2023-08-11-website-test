@@ -12,7 +12,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--gilroy)'],
+        gilroy: ['var(--gilroy)'],
+        inter: 'var(--font-inter)',
+        sans: 'var(--font-inter)',
       },
       colors: {
         primary: '#6651D4',
@@ -22,6 +24,9 @@ module.exports = {
       },
       borderWidth: {
         DEFAULT: '0.5px',
+      },
+      maxWidth: {
+        '8xl': '1245px',
       },
     },
   },
