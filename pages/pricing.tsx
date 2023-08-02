@@ -9,11 +9,11 @@ export default function Pricing() {
         <h1 className="font-bold mb-6 mt-4 text-[1.9em] md:text-[2em] lg:text-[2.5em] lg:w-[30%] md:w-[57%] w-[90%] mx-auto text-black">
           Pricing built for businesses of all sizes.
         </h1>
-        <div className="flex md:hidden mb-12 border border-slate-200 rounded-md px-1 py-1 w-[16.3m] bg-[#FCFCFD] justify-around gap-3 ml-auto mr-auto">
-          <span className="py-2 px-2 font-semibold rounded-md bg-[#7B61FF] text-white">
+        <div className="flex mb-12 border border-slate-200 rounded-md px-1 py-1 w-[18.3m] bg-[#FCFCFD] justify-around gap-3 ml-auto mr-auto font-light">
+          <span className="py-3 px-4 font-semibold rounded-md bg-[#7B61FF] text-white">
             Monthly billing
           </span>
-          <span className="py-2 px-2 font-semibold rounded-md text-slate-500 ">
+          <span className="py-3 px-4 rounded-md text-slate-500 font-[400]">
             Annual billing
           </span>
         </div>
@@ -30,14 +30,7 @@ export default function Pricing() {
             className="transform "
             style={{ width: '100%', height: '100%', position: 'absolute' }}
           />
-          <div className="hidden md:flex border border-slate-200 rounded-md px-1 py-1 w-[16.3em] bg-[#FCFCFD] justify-around gap-3 ml-auto mr-auto">
-            <span className="py-2 px-2 font-semibold rounded-md bg-[#7B61FF] text-white">
-              Monthly billing
-            </span>
-            <span className="py-2 px-2 font-semibold rounded-md text-slate-500 ">
-              Annual billing
-            </span>
-          </div>
+
           <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-6 lg:gap-[5.4%] md:gap-5 lg:pt-[6em] lg:px-[11em] md:px-[2em] px-[1em]">
             <div className="md:hover:scale-[1.05] flex flex-col rounded-lg bg-white z-[2] text-left lg:mb-[-1.8em] lg:mt-auto md:mt-[2em] p-6 pb-10 transition-all duration-300 lg:h-[100%] cursor-pointer border border-slate-300">
               <h2 className="text-black text-[2em] md:text-[2.5em] pb-4 font-bold">

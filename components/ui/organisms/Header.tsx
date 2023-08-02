@@ -18,7 +18,7 @@ function LoginSignUp({ visibleOnMobile }) {
       <Link href="/signup">
         <button
           type="button"
-          className="bg-primary text-white px-6 py-2 rounded-md font-semibold"
+          className="bg-primary text-white px-6 py-3 rounded-md font-semibold"
         >
           Get started
         </button>
@@ -99,7 +99,7 @@ export default function Header() {
 
   return (
     <nav className="p-4">
-      <div className="container mx-auto md:flex md:justify-between md:items-center max-w-8xl">
+      <div className="container mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
           <div className="text-xl text-black font-semibold">
             <Image src={Logo} alt="logo" />
@@ -141,7 +141,7 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible text-sm${
+          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible text-sm lg:ml-[5rem] ${
             isMenuOpen ? 'max-h-96' : 'max-h-0'
           }
 

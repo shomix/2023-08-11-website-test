@@ -12,3 +12,14 @@
 html {
   scroll-behavior: smooth !important;
 }
+
+h3,
+h1,
+h2,
+h4 {
+  font-family: 'Gilroy-Bold';
+}
+span,
+p {
+  font-family: 'Inter';
+}
