@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import localFont from 'next/font/local';
+import { Inter } from 'next/font/google';
 import { Provider } from 'react-redux';
 
 import store from '../redux/store';
@@ -28,10 +29,16 @@ const gilroy = localFont({
   variable: '--gilroy',
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-inter',
+});
+
 function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <div className={`${gilroy.variable} font-sans`}>
+      <div className={`${gilroy.variable} ${inter.variable} font-sans`}>
         <Component {...pageProps} />
       </div>
     </Provider>

@@ -12,9 +12,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--gilroy)'],
+        gilroy: ['var(--gilroy)'],
+        inter: 'var(--font-inter)',
+        sans: 'var(--font-inter)',
+      },
+      colors: {
+        primary: '#6651D4',
+        neutral: '#344054',
+        'btn-primary': '#7B61FF',
+        'accordion-open': '#E4DFFF',
+      },
+      borderWidth: {
+        DEFAULT: '0.5px',
+      },
+      maxWidth: {
+        '8xl': '1245px',
       },
     },
   },
-  // plugins: [require('flowbite/plugin')],
+  darkMode: 'class',
 };
