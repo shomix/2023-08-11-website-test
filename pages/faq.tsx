@@ -102,8 +102,8 @@ export default function Faq() {
           </div>
           <div className="border-b py-2 pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="Does Bonpay facilitate fiat payments for businesses?"
+              content="No, Bonpay exclusively supports Digital assets, including cryptocurrencies and NFTs, as the accepted means of payment. We provide a secure and streamlined platform for handling these digital transactions, ensuring seamless experiences for businesses and their customers in the world of digital assets."
             />
           </div>
           <div className="border-b py-2 pb-6">
