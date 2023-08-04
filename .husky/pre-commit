@@ -3,7 +3,6 @@
 
 echo '🏗️👷 Running checks on your code before committing' 🔍🧐
 
-yarn format .
 npx lint-staged
 yarn build
 
