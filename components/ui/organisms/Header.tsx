@@ -1,7 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '@/components/assets';
+import {
+  Card,
+  Logo,
+  Code,
+  Mobile,
+  Book,
+  Flag,
+  Tag,
+  Discord2,
+  Message,
+} from '@/components/assets';
 
 function LoginSignUp({ visibleOnMobile }) {
   return (
@@ -27,33 +37,59 @@ function LoginSignUp({ visibleOnMobile }) {
   );
 }
 
-function Dropdown({ title }: { title: string }) {
+function Dropdown({
+  title,
+  subtitle,
+  midtitle,
+  lasttitle,
+  sub,
+  mid,
+  last,
+  icon1,
+  icon2,
+  icon3,
+}: {
+  title: string;
+  subtitle: string;
+  midtitle: string;
+  lasttitle: string;
+  sub: string;
+  mid: string;
+  last: string;
+  icon1: string;
+  icon2: string;
+  icon3: string;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const handleToggle = () => {
+  const handleMouseEnter = () => {
     setIsOpen(!isOpen);
   };
+  // const handleMouseShow = () => {
+  //   setIsOpen(true);
+  // };
 
-  const handleClickOutside = (event) => {
+  const handleMouseOut = (event: any) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mouseenter', handleMouseOut);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mouseleave', handleMouseEnter);
     };
   }, []);
 
   return (
-    <div className="dropdown relative" ref={dropdownRef}>
+    <div className="dropdown relative " ref={dropdownRef}>
       <button
         type="button"
         className="flex items-center gap-2"
-        onClick={handleToggle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseOut}
       >
         <span className="font-inter">{title}</span>
         <svg
@@ -74,16 +110,29 @@ function Dropdown({ title }: { title: string }) {
         </svg>
       </button>
       {isOpen && (
-        <ul className="dropdown-content bg-white absolute top-10 left-0 w-40 border border-gray-300 shadow-lg rounded z-10">
-          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
-            Option 1
-          </li>
-          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
-            Option 2
-          </li>
-          <li className="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer">
-            Option 3
-          </li>
+        <ul className="dropdown-content bg-white absolute top-10 left-0 w-[22rem] border border-gray-300 shadow-lg rounded z-20 p-4 px-4 ">
+          <div className="flex items-center px-4 py-2 hover:bg-gray-100 ">
+            <Image src={icon1} alt="logo" />
+            <li className="px-4 py-2 text-black  cursor-pointer text-lg font-medium">
+              {subtitle}
+              <p className="text-sm text[#667085] font-light">{sub}</p>
+            </li>
+          </div>
+          <div className="flex items-center px-4 py-2 hover:bg-gray-100 ">
+            <Image src={icon2} alt="logo" />
+            <li className="px-4 py-2 text-black cursor-pointer  text-lg  ">
+              {midtitle}
+              <p className="text-sm text[#667085] font-light">{mid}</p>
+            </li>
+          </div>
+          <div className="flex items-center px-4 py-2 hover:bg-gray-100">
+            <Image src={icon3} alt="" />
+
+            <li className="px-4 py-2 text-black  cursor-pointer text-lg">
+              {lasttitle}
+              <p className="text-sm text[#667085] font-light">{last}</p>
+            </li>
+          </div>
         </ul>
       )}
     </div>
@@ -148,14 +197,47 @@ export default function Header() {
           `}
         >
           <div className="block my-4 md:my-0">
-            <Dropdown title="Product" />
+            <Dropdown
+              title="Product"
+              subtitle="Online Payment"
+              icon1={Code}
+              icon2={Card}
+              icon3={Mobile}
+              sub="Prebuilt checkout page"
+              midtitle="Payment Links"
+              mid="No code payment linkst"
+              lasttitle="Components"
+              last="Customizable payment UI"
+            />
           </div>
           <div className="block my-4 md:my-0">Pricing</div>
           <div className="block my-4 md:my-0">
-            <Dropdown title="Developers" />
+            <Dropdown
+              title="Developers"
+              subtitle="Documentation"
+              sub="Online Payment"
+              icon1={Book}
+              icon2={Flag}
+              icon3={Tag}
+              midtitle="Get Started"
+              mid="Build amazing experiences"
+              lasttitle="Guides"
+              last="Start your journey here"
+            />
           </div>
           <div>
-            <Dropdown title="Support" />
+            <Dropdown
+              title="Support"
+              subtitle="Discord Support"
+              sub=""
+              icon1={Discord2}
+              icon2={Message}
+              midtitle="Contact Us"
+              icon3=""
+              mid=""
+              lasttitle=""
+              last=""
+            />
           </div>
           <LoginSignUp visibleOnMobile />
         </div>
