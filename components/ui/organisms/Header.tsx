@@ -56,42 +56,55 @@ function Dropdown({
   sub: string;
   mid: string;
   last: string;
-  icon1: string;
-  icon2: string;
-  icon3: string;
+  icon1: React.ReactNode;
+  icon2: React.ReactNode;
+  icon3: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    setIsOpen(!isOpen);
+  const dropdownRef = useRef<HTMLDivElement>();
+  const isWindowWidthGreaterThan960 = () => {
+    return window.innerWidth > 960;
   };
-  // const handleMouseShow = () => {
-  //   setIsOpen(true);
-  // };
-
-  const handleMouseOut = (event: any) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  // Event handler for mouse enter
+  const onMouseEnter = () => {
+    if (isWindowWidthGreaterThan960()) {
+      setIsOpen(true);
+    }
+  };
+  // Event handler for mouse leave
+  const onMouseLeave = () => {
+    if (isWindowWidthGreaterThan960()) {
       setIsOpen(false);
     }
   };
-
   useEffect(() => {
-    document.addEventListener('mouseenter', handleMouseOut);
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseEnter);
+    const handler = (event: MouseEvent) => {
+      if (
+        window.innerWidth > 960 &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
     };
-  }, []);
+
+    document.addEventListener('mousedown', handler);
+    document.addEventListener('touchend', handler);
+    return () => {
+      document.removeEventListener('mousedown', handler);
+      document.removeEventListener('touchend', handler);
+    };
+  }, [isOpen]);
 
   return (
-    <div className="dropdown relative " ref={dropdownRef}>
-      <button
-        type="button"
-        className="flex items-center gap-2"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseOut}
-      >
-        <span className="font-inter">{title}</span>
+    <div
+      className="dropdown relative "
+      ref={dropdownRef}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <button type="button" className="flex items-center gap-2">
+        <span className=" font-inter font-normal ">{title}</span>
         <svg
           width="14"
           height="14"
@@ -110,27 +123,27 @@ function Dropdown({
         </svg>
       </button>
       {isOpen && (
-        <ul className="dropdown-content bg-white absolute top-10 left-0 w-[22rem] border border-gray-300 shadow-lg rounded z-20 p-4 px-4 ">
+        <ul className="dropdown-content bg-white absolute top-[1.1rem] left-0 w-[22rem] border border-gray-300 my-[0.20rem] rounded z-20 min-w-full p-2 px-4 font-inter shadow-lg shadow-black-500/40">
           <div className="flex items-center px-4 py-2 hover:bg-gray-100 ">
-            <Image src={icon1} alt="logo" />
-            <li className="px-4 py-2 text-black  cursor-pointer text-lg font-medium">
+            {icon1}
+            <li className="px-4 py-2 font-medium cursor-pointer text-base ">
               {subtitle}
-              <p className="text-sm text[#667085] font-light">{sub}</p>
+              <p className="text-sm text-[#667085] font-normal">{sub}</p>
             </li>
           </div>
           <div className="flex items-center px-4 py-2 hover:bg-gray-100 ">
-            <Image src={icon2} alt="logo" />
-            <li className="px-4 py-2 text-black cursor-pointer  text-lg  ">
+            {icon2}
+            <li className="px-4 py-2 cursor-pointer font-medium text-base  ">
               {midtitle}
-              <p className="text-sm text[#667085] font-light">{mid}</p>
+              <p className="text-sm text-[#667085] font-normal">{mid}</p>
             </li>
           </div>
           <div className="flex items-center px-4 py-2 hover:bg-gray-100">
-            <Image src={icon3} alt="" />
+            {icon3}
 
-            <li className="px-4 py-2 text-black  cursor-pointer text-lg">
+            <li className="px-4 py-2   font-medium cursor-pointer text-base">
               {lasttitle}
-              <p className="text-sm text[#667085] font-light">{last}</p>
+              <p className="text-sm text-[#667085] font-normal ">{last}</p>
             </li>
           </div>
         </ul>
@@ -196,13 +209,13 @@ export default function Header() {
 
           `}
         >
-          <div className="block my-4 md:my-0">
+          <div className="block my-4 md:my-0  ">
             <Dropdown
               title="Product"
               subtitle="Online Payment"
-              icon1={Code}
-              icon2={Card}
-              icon3={Mobile}
+              icon1={<Code />}
+              icon2={<Card />}
+              icon3={<Mobile />}
               sub="Prebuilt checkout page"
               midtitle="Payment Links"
               mid="No code payment linkst"
@@ -216,9 +229,9 @@ export default function Header() {
               title="Developers"
               subtitle="Documentation"
               sub="Online Payment"
-              icon1={Book}
-              icon2={Flag}
-              icon3={Tag}
+              icon1={<Book />}
+              icon2={<Flag />}
+              icon3={<Tag />}
               midtitle="Get Started"
               mid="Build amazing experiences"
               lasttitle="Guides"
@@ -230,8 +243,8 @@ export default function Header() {
               title="Support"
               subtitle="Discord Support"
               sub=""
-              icon1={Discord2}
-              icon2={Message}
+              icon1={<Discord2 />}
+              icon2={<Message />}
               midtitle="Contact Us"
               icon3=""
               mid=""

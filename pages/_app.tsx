@@ -1,6 +1,5 @@
 import '@/styles/globals.css';
 import localFont from 'next/font/local';
-import { Inter } from 'next/font/google';
 import { Provider } from 'react-redux';
 
 import store from '../redux/store';
@@ -29,9 +28,21 @@ const gilroy = localFont({
   variable: '--gilroy',
 });
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
+const inter = localFont({
+  src: [
+    {
+      path: '../fonts/Inter-Regular.ttf',
+      style: 'normal',
+      weight: '400',
+      // subsets: ['latin'],
+    },
+    {
+      path: '../fonts/Inter-Medium.ttf',
+      style: 'medium',
+      weight: '500',
+      // subsets: ['latin'],
+    },
+  ],
   variable: '--font-inter',
 });
 
