@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Card,
@@ -63,7 +62,7 @@ function Dropdown({
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>();
   const isWindowWidthGreaterThan960 = () => {
-    return window.innerWidth > 960;
+    return window.innerWidth > 260;
   };
   // Event handler for mouse enter
   const onMouseEnter = () => {
@@ -80,7 +79,7 @@ function Dropdown({
   useEffect(() => {
     const handler = (event: MouseEvent) => {
       if (
-        window.innerWidth > 960 &&
+        window.innerWidth > 260 &&
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
@@ -123,7 +122,7 @@ function Dropdown({
         </svg>
       </button>
       {isOpen && (
-        <ul className="dropdown-content bg-white absolute top-[1.1rem] left-0 w-[22rem] border border-gray-300 my-[0.20rem] rounded z-20 min-w-full p-2 px-4 font-inter shadow-lg shadow-black-500/40">
+        <ul className="dropdown-content bg-white  top-[1.1rem] left-0 border border-gray-300 my-[0.20rem]   max-[384px]:max-w-[100%] w-[22rem] rounded z-[10] absolute p-2 px-4 font-inter shadow-lg shadow-black-500/40">
           <div className="flex items-center px-4 py-2 hover:bg-gray-100 ">
             {icon1}
             <li className="px-4 py-2 font-medium cursor-pointer text-base ">
@@ -160,11 +159,11 @@ export default function Header() {
   };
 
   return (
-    <nav className="p-4">
-      <div className="container mx-auto md:flex md:justify-between md:items-center">
+    <nav className="p-4 ">
+      <div className="container mx-auto md:flex md:justify-between md:items-center  ">
         <div className="flex items-center justify-between">
           <div className="text-xl text-black font-semibold">
-            <Image src={Logo} alt="logo" />
+            <Logo />
           </div>
           <div className="md:hidden">
             <button
@@ -203,13 +202,13 @@ export default function Header() {
           </div>
         </div>
         <div
-          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 md:max-h-96 overflow-hidden md:overflow-visible text-sm lg:ml-[5rem] ${
+          className={`md:flex flex-col md:flex-row gap-8 transition-all duration-500 linear max-h-0 h-[30rem] md:max-h-0 md:h-[30rem] overflow-hidden md:overflow-visible text-sm lg:ml-[5rem] ${
             isMenuOpen ? 'max-h-96' : 'max-h-0'
           }
 
           `}
         >
-          <div className="block my-4 md:my-0  ">
+          <div className="block my-4 md:my-0   ">
             <Dropdown
               title="Product"
               subtitle="Online Payment"
