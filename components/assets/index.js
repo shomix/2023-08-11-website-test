@@ -1,8 +1,11 @@
 // --- logo ---
 import Logo from './logo/lightmode.svg';
+import DarkLogo from './logo/darkmode.svg';
 import PlusCircle from './icons/add-circle.svg';
 import MinusCircle from './icons/minus-cirlce.svg';
 import Messages from './icons/messages-2.svg';
+import CreatorIcon from './icons/creator-icon.svg';
+import BusinessIcon from './icons/business-icon.svg';
 
 // --- social ---
 import Twitter from './icons/twitter.svg';
@@ -16,7 +19,13 @@ import Frame4 from './pricing_page_assests/Frame4.png';
 import Line6 from './pricing_page_assests/Line 6.png';
 import messages2 from './pricing_page_assests/messages-2.png';
 import tickCircle from './pricing_page_assests/tick-circle.svg';
+import Rectangle1 from './illustrations/Rectangle1.svg';
+import Rectangle2 from './illustrations/Rectangle2.svg';
+import Rectangle3 from './illustrations/Rectangle3.svg';
+import Rectangle4 from './illustrations/Rectangle4.svg';
+
 // --- Icons ---
+import BackArrow from './icons/back-arrow.svg';
 import Card from './icons/card.svg';
 import Code from './icons/code.svg';
 import Mobile from './icons/mobile.svg';
@@ -47,4 +56,12 @@ export {
   Tag,
   Discord2,
   Message,
+  Rectangle1,
+  Rectangle2,
+  Rectangle3,
+  Rectangle4,
+  BackArrow,
+  DarkLogo,
+  CreatorIcon,
+  BusinessIcon,
 };
