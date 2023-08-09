@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
 import {
   ArrowCircleRightSecondary,
   ArrowCircleRightTertiary,
@@ -32,31 +31,6 @@ function ListItem({
 }
 
 export default function Home() {
-  const [heroBgUrl, setHeroBgUrl] = useState('');
-
-  const updateHeroBgUrl = () => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth > 768) {
-      setHeroBgUrl('/desktop-hero.svg');
-    } else {
-      setHeroBgUrl('/mobile-hero.svg');
-    }
-  };
-
-  useEffect(() => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth > 768) {
-      setHeroBgUrl('/desktop-hero.svg');
-    } else {
-      setHeroBgUrl('/mobile-hero.svg');
-    }
-    window.addEventListener('resize', updateHeroBgUrl);
-
-    return () => {
-      window.removeEventListener('resize', updateHeroBgUrl);
-    };
-  }, []);
-
   return (
     <div className="">
       <div className="bg-[url('/hero-bg/fourth.svg'),_url('/hero-bg/third.svg'),_url('/hero-bg/second.svg'),_url('/hero-bg/top.svg')] bg-[position:_right_0px_bottom_0px,_right_0px_bottom_0px,_right_0px_bottom_-120px,_right_0px_bottom_-50px] bg-[size:100%,100%,120%,cover] bg-no-repeat pt-20">
@@ -73,16 +47,7 @@ export default function Home() {
             etiam neque faucibus urna. Erat a viverra suspendisse nisl et
             senectus at sit ut.
           </p>
-          <div>
-            {heroBgUrl && (
-              <Image
-                src={heroBgUrl}
-                alt="list-icon"
-                width={1000}
-                height={1000}
-              />
-            )}
-          </div>
+          <div className=" h-screen max-h-[28rem] bg-gray-200 bg-[url('/mobile-hero.png')] sm:bg-[url('/desktop-hero.png')]  w-full max-w-5xl bg-cover rounded-t-2xl"></div>
         </div>
       </div>
       <div className="grid gap-4 grid-cols-2 w-11/12 max-w-8xl mx-auto">
