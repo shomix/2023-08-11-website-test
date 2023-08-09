@@ -108,8 +108,8 @@ export default function Faq() {
           </div>
           <div className="border-b py-2 pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="How can I withdraw my USDC from Bonpay?"
+              content="Bonpay provides two convenient withdrawal options for your USDC funds. You can opt for a direct bank withdrawal, where the funds will be transferred to your bank account. Alternatively, you can choose the cash in option, which allows you to visit a bank in person and receive cash for your USDC. Both methods offer flexibility and ease of access to your funds, ensuring a seamless withdrawal experience."
             />
           </div>
           <div className="border-b py-2 pb-6">
