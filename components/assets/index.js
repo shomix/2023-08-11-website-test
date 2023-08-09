@@ -25,6 +25,14 @@ import Flag from './icons/flag.svg';
 import Tag from './icons/tag.svg';
 import Discord2 from './icons/discord-2.svg';
 import Message from './icons/messages.svg';
+import CreatorList from './icons/creator-list.svg';
+import BusinessList from './icons/business-list.svg';
+import ArrowRight from './icons/arrow-right.svg';
+import ArrowCircleRightSecondary from './icons/arrow-circle-right-secondary.svg';
+import ArrowCircleRightTertiary from './icons/arrow-circle-right-tertiary.svg';
+import Integration1 from './icons/integration_1.svg';
+import Integration2 from './icons/integration_2.svg';
+import Integration3 from './icons/integration_3.svg';
 
 // --- Exports ---
 export default Logo;
@@ -47,4 +55,12 @@ export {
   Tag,
   Discord2,
   Message,
+  CreatorList,
+  BusinessList,
+  ArrowRight,
+  ArrowCircleRightSecondary,
+  ArrowCircleRightTertiary,
+  Integration1,
+  Integration2,
+  Integration3,
 };

@@ -31,7 +31,9 @@ export default function Footer() {
     <footer className="pt-12 px-4 bg-primary">
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-12 max-w-8xl m-auto font-gilroy">
         <div className="">
-          <h3 className="font-extrabold text-white mb-4">Product</h3>
+          <h3 className="font-extrabold font-gilroy text-white mb-4">
+            Product
+          </h3>
           <FooterLinks
             links={[
               { name: 'Online Payments', href: '/online-payments' },
@@ -46,7 +48,9 @@ export default function Footer() {
           />
         </div>
         <div className="">
-          <h3 className="font-extrabold text-white mb-4">Company</h3>
+          <h3 className="font-extrabold font-gilroy text-white mb-4">
+            Company
+          </h3>
           <FooterLinks
             links={[
               { name: 'About Us', href: '/about-us' },
@@ -58,7 +62,7 @@ export default function Footer() {
           />
         </div>
         <div className="">
-          <h3 className="font-extrabold text-white mb-4 col-span-full">
+          <h3 className="font-extrabold font-gilroy text-white mb-4 col-span-full">
             Developers
           </h3>
           <FooterLinks
@@ -72,7 +76,7 @@ export default function Footer() {
           />
         </div>
         <div className="lg:col-start-4 md:col-start-2 col-span-full text-center md:text-left">
-          <h3 className="font-extrabold text-white mb-4 text-lg">
+          <h3 className="font-extrabold font-gilroy text-white mb-4 text-lg">
             Subscribe to Bonpay Newsletter
           </h3>
           <form className="gap-2 md:gap-1 grid grid-cols-4">
@@ -95,7 +99,7 @@ export default function Footer() {
             anytime.
           </p>
 
-          <h3 className="font-extrabold text-white mb-4">
+          <h3 className="font-extrabold font-gilroy text-white mb-4">
             Follow Bonpay on social
           </h3>
           <div className="flex gap-6 w-fit m-auto md:m-0">
@@ -107,7 +111,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-white text-center md:text-left border-t border-[#1D2939] pt-6 max-w-8xl m-auto pb-6 mt-12 font-medium font-inter">
+      <div className="text-white text-center md:text-left border-t border-[#5241AA] pt-6 max-w-8xl m-auto pb-6 mt-12 font-medium font-inter">
         &copy; {new Date().getFullYear()} Bonpay Inc. All rights reserved.
       </div>
     </footer>
