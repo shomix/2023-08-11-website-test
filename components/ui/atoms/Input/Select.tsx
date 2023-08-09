@@ -19,7 +19,7 @@ export default function SelectInput({
   id,
   inputClassName = 'border py-2 px-2 rounded-md text-slate-600',
   containerClassName = 'flex flex-col mb-4',
-  labelClassName = 'mb-1 font-medium',
+  labelClassName = 'mb-1 font-normal',
   onChange,
 }) {
   const option = options.map((item) => (

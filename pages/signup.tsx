@@ -5,16 +5,12 @@ import {
   BusinessIcon,
   BackArrow,
   CreatorIcon,
-  Rectangle1,
-  Rectangle2,
-  Rectangle3,
-  Rectangle4,
 } from '@/components/assets';
-import Input from '@/components/ui/organisms/Input';
-import SelectInput from '@/components/ui/organisms/SelectInput';
-import Button from '@/components/ui/organisms/Button';
-import CheckBoxInput from '@/components/ui/organisms/CheckBoxInput';
-import RadioInput from '@/components/ui/organisms/RadioInput';
+import Input from '@/components/ui/atoms/Input/Input';
+import SelectInput from '@/components/ui/atoms/Input/Select';
+import Button from '@/components/ui/atoms/Button';
+import CheckBoxInput from '@/components/ui/atoms/Input/CheckBox';
+import RadioInput from '@/components/ui/atoms/Input/Radio';
 
 export default function Signup() {
   const [selected, setSelected] = useState('creator'); // saves current section
@@ -59,7 +55,7 @@ export default function Signup() {
 
   // creator section content
   const creatorContent = (
-    <div className="text-[0.9em]">
+    <div className="text-[1.em]">
       <Input
         text="Full Name"
         placeholder="Full name"
@@ -86,7 +82,7 @@ export default function Signup() {
       />
 
       <p className="font-medium font-gilroy">Are you a software developer ?</p>
-      <div className="flex gap-4 py-3">
+      <div className="flex gap-5 py-3">
         <RadioInput
           label={
             // eslint-disable-next-line jsx-a11y/label-has-associated-control
@@ -104,28 +100,20 @@ export default function Signup() {
           id="isSoftwareDeveloper"
         />
       </div>
-      <RadioInput
-        containerClassName="flex items-start gap-2 mb-4"
-        label={
-          // eslint-disable-next-line jsx-a11y/label-has-associated-control
-          <label
-            htmlFor="consentPolicy"
-            className="p-0 text-slate-600 font-gilroy"
-          >
-            I consent to the collection and processing of my personal data in
-            line with data regulations as described in the
-            <span className="font-semibold text-[#5241AA] font-gilroy">
-              {' '}
-              Privacy Policy
-            </span>
-          </label>
-        }
-        id="consentPolicy"
-        checked={formData.consentPolicy}
-        onChange={handleRadioInput}
-      />
+      <div className="flex gap-3 mt-3 mb-4 items-baseline">
+        <CheckBoxInput isChecked={false} />
 
-      <Button text="Create Account" onClick={handleSubmit} />
+        <div className="p-0 text-slate-600 font-gilroy">
+          I consent to the collection and processing of my personal data in line
+          with data regulations as described in the
+          <span className="font-semibold text-[#5241AA] font-gilroy">
+            {' '}
+            Privacy Policy
+          </span>
+        </div>
+      </div>
+
+      <Button onClick={handleSubmit}>Create Account</Button>
       <p className="w-[80%] mt-4 mx-auto text-slate-600 text-center font-gilroy">
         By clicking “Create Account” button, you agree to Bonpay’s <br />
         <span className="text-[#5241AA] font-semibold font-gilroy">
@@ -144,7 +132,7 @@ export default function Signup() {
 
   // First Business Section Content
   const businessFirst = (
-    <div className="text-[0.9em]">
+    <div className="text-[1em] font-[Inter]">
       <Input
         text="Legal Business Name"
         placeholder="Business name"
@@ -180,7 +168,7 @@ export default function Signup() {
         value={formData.website}
       />
 
-      <Button text="Continue" onClick={businessNext} />
+      <Button onClick={businessNext}>Continue</Button>
     </div>
   );
 
@@ -191,38 +179,15 @@ export default function Signup() {
   const businessContent = nextBusiness ? businessSecond : businessFirst;
 
   return (
-    <div className="font-gilroy">
-      <div className="flex flex-col md:flex-row z-[-5] ">
-        <div className="flex-1 bg-[#3D3080] py-5 px-6 md:px-10 lg:px-16 relative text-white z-[1]">
-          <Image
-            alt="DarkLogo"
-            src={DarkLogo}
-            className="w-[7em] flex absolute top-5 "
-          />
-
-          {/* Lines */}
-          <Image
-            src={Rectangle1}
-            alt="rectangle1"
-            className="absolute left-[-10em] bottom-0 z-[-1] top-0"
-          />
-          <Image
-            src={Rectangle4}
-            alt="rectangle4"
-            className="absolute left-[-10em] bottom-0 z-[-1] top-[5em]"
-          />
-          <Image
-            src={Rectangle3}
-            alt="rectangle3"
-            className="hidden md:flex fixed left-[-10em] bottom-0 z-[-1] top-[10em]"
-          />
-          <Image
-            src={Rectangle2}
-            alt="rectangle2"
-            className="absolute right-0 md:-right-40 z-[-1] bottom-0 "
-          />
-
-          <div className="mt-20 z-[-3]">
+    <div className="font-gilroy w-[100vw]">
+      <div className="flex flex-col md:flex-row z-[-5] w-[100%] h-[100vh]">
+        <Image
+          alt="DarkLogo"
+          src={DarkLogo}
+          className="h-[7em] absolute mb-8 top-6 left-14"
+        />
+        <div className="flex bg-[#3D3080] flex-col  w-[50%] h-[100%] px-6 md:px-10 text-white lg:px-14 items-center justify-center">
+          <div className="relative">
             <h1 className="text-[2em] z-20 font-bold font-gilroy">
               Welcome to Bonpay
             </h1>
@@ -372,29 +337,28 @@ export default function Signup() {
             </div>
           </div>
         </div>
-        <div className="flex h-[80vh] md:flex-1 md:h-screen bg-white py-5 pt-1 px-6 md:pt-0 md:px-10 lg:px-16 z-[2]">
-          <div className=" w-full mt-10 mb-7 md:mb-auto md:mt-[6.2em] ">
-            <div className="flex flex-col-reverse justify-start items-start md:flex-row md:justify-between">
-              <h1 className="text-[1.8em] text-[#6651D4] font-bold pb-4 font-gilroy">
-                Create new account
-              </h1>
 
-              {!isCreator && nextBusiness && (
-                <div
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      setNextBusiness(false);
-                    }
-                  }}
-                  onClick={() => setNextBusiness(false)}
-                  className=" cursor-pointer active:bg-[#0504091a] bg-[#3D30801A] bg-opacity-[0.1] flex items-center h-[2.5em] my-auto py-0 px-[0.6em] rounded-full mb-4 md:mb-auto "
-                >
-                  <Image src={BackArrow} alt="back_arrow" />
-                </div>
-              )}
-            </div>
+        <div className="flex h-[100vh] items-center justify-center w-[50%] md:flex-1 md:h-screen bg-white md:flex-col py-5 pt-1 px-6 md:pt-0 md:px-10 z-[2]">
+          <div className="w-[100%] lg:px-28">
+            {!isCreator && nextBusiness && (
+              <div
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setNextBusiness(false);
+                  }
+                }}
+                onClick={() => setNextBusiness(false)}
+                className=" cursor-pointer active:bg-[#0504091a] bg-[#3D30801A] bg-opacity-[0.1] flex items-center h-[2.5em] py-0 px-[0.6em] rounded-full mb-6 w-[2.5em]"
+              >
+                <Image src={BackArrow} alt="back_arrow" />
+              </div>
+            )}
+            <h1 className="text-[1.8em] text-[#6651D4] font-semibold pb-4 font-gilroy">
+              Create new account
+            </h1>
+
             <form className="text-[0.9em] pb-10 md:pb-0">
               {isCreator ? creatorContent : businessContent}
             </form>
