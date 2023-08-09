@@ -180,13 +180,13 @@ export default function Signup() {
 
   return (
     <div className="font-gilroy w-[100vw]">
-      <div className="flex flex-col md:flex-row z-[-5] w-[100%] h-[100vh]">
-        <Image
-          alt="DarkLogo"
-          src={DarkLogo}
-          className="h-[7em] absolute mb-8 top-6 left-14"
-        />
-        <div className="flex bg-[#3D3080] flex-col  w-[50%] h-[100%] px-6 md:px-10 text-white lg:px-14 items-center justify-center">
+      <Image
+        alt="DarkLogo"
+        src={DarkLogo}
+        className="h-[7em] mb-8 absolute left-[7rem]"
+      />
+      <div className="flex flex-col  md:flex-row z-[-5] w-[100%] h-[100vh]">
+        <div className="flex lg:px-28 bg-[#3D3080] flex-col  w-[50%] h-[100%] px-6 md:px-10 text-white lg:px-14 items-center justify-center">
           <div className="relative">
             <h1 className="text-[2em] z-20 font-bold font-gilroy">
               Welcome to Bonpay
@@ -355,6 +355,7 @@ export default function Signup() {
                 <Image src={BackArrow} alt="back_arrow" />
               </div>
             )}
+
             <h1 className="text-[1.8em] text-[#6651D4] font-semibold pb-4 font-gilroy">
               Create new account
             </h1>
