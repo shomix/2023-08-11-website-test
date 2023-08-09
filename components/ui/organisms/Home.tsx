@@ -186,9 +186,9 @@ export default function Home() {
       </div>
       <div className="grid gap-4 grid-cols-2 w-11/12 max-w-8xl mx-auto">
         <div className="col-span-full bg-[url('/quote-bg-1.svg'),url('/quote-bg-2.svg')] bg-cover bg-center bg-blend-multiply bg-primary w-full max-w-8xl mx-auto flex items-center rounded-2xl p-3 md:p8 md:py-20 md:px-14">
-          <p className="text-white text-3xl md:text-5xl font-inter max-w-5xl font-extrabold">
+          <h2 className="text-white text-3xl md:text-5xl font-inter max-w-5xl font-semibold font-[Gilroy-Bold]">
             We are the leading blockchain powered payment platform
-          </p>
+          </h2>
         </div>
         <div className="col-span-full md:col-span-1 bg-[url('/creator-card.svg')] bg-[position:_right_0px_bottom_-100px] bg-no-repeat bg-blend-multiply bg-[#FEF6FB] border border-[#FFDCE9] p-6 md:py-10 md:px-8 rounded-2xl flex flex-col items-start gap-4">
           <h3 className="font-gilroy font-bold text-3xl md:text-4xl">
@@ -261,7 +261,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-4 md:flex-row w-11/12 max-w-8xl m-auto items-center my-10 md:my-24">
         <div className="flex-1 md:pr-20">
-          <span className="text-primary font-bold font-gilroy bg-[#F9F5FF] px-3 py-1 rounded-full">
+          <span className="text-primary font-bold font-gilroy bg-[#F9F5FF] px-4 py-3 rounded-full">
             For Developers
           </span>
           <h3 className="font-gilroy text-2xl md:text-[2.5rem] md:leading-[2.5rem] font-bold break-words my-6">
