@@ -185,12 +185,12 @@ export default function Home() {
         </div>
       </div>
       <div className="grid gap-4 grid-cols-2 w-11/12 max-w-8xl mx-auto">
-        <div className="col-span-full bg-[url('/quote-bg-1.svg'),url('/quote-bg-2.svg')] bg-cover bg-center bg-blend-multiply bg-primary w-full max-w-8xl mx-auto flex items-center rounded-md p-8 md:py-20 md:px-14">
+        <div className="col-span-full bg-[url('/quote-bg-1.svg'),url('/quote-bg-2.svg')] bg-cover bg-center bg-blend-multiply bg-primary w-full max-w-8xl mx-auto flex items-center rounded-2xl p-3 md:p8 md:py-20 md:px-14">
           <p className="text-white text-3xl md:text-5xl font-inter max-w-5xl font-extrabold">
             We are the leading blockchain powered payment platform
           </p>
         </div>
-        <div className="col-span-full md:col-span-1 bg-[url('/creator-card.svg')] bg-[position:_right_0px_bottom_-100px] bg-no-repeat bg-blend-multiply bg-[#FEF6FB] border border-[#FFDCE9] p-6 md:py-10 md:px-8 rounded-lg flex flex-col items-start gap-4">
+        <div className="col-span-full md:col-span-1 bg-[url('/creator-card.svg')] bg-[position:_right_0px_bottom_-100px] bg-no-repeat bg-blend-multiply bg-[#FEF6FB] border border-[#FFDCE9] p-6 md:py-10 md:px-8 rounded-2xl flex flex-col items-start gap-4">
           <h3 className="font-gilroy font-bold text-3xl md:text-4xl">
             For Creators
           </h3>
@@ -224,7 +224,7 @@ export default function Home() {
             />
           </button>
         </div>
-        <div className="col-span-full md:col-span-1 bg-[url('/business-card.svg')] bg-[position:_right_0px_bottom_-100px] bg-no-repeat bg-blend-multiply bg-[#EFF8FF] border border-[#D1E9FF] p-6 md:py-10 md:px-8 rounded-lg flex flex-col items-start gap-4">
+        <div className="col-span-full md:col-span-1 bg-[url('/business-card.svg')] bg-[position:_right_0px_bottom_-100px] bg-no-repeat bg-blend-multiply bg-[#EFF8FF] border border-[#D1E9FF] p-6 md:py-10 md:px-8 rounded-2xl flex flex-col items-start gap-4">
           <h3 className="font-gilroy font-bold text-3xl md:text-4xl">
             For Businesses
           </h3>
@@ -286,7 +286,7 @@ export default function Home() {
           <Image src="/code-preview.png" alt="api" width={800} height={800} />
         </div>
       </div>
-      <div className="bg-primary md:bg-[url('/trial-bg.svg')] bg-blend-multiply mb-12 md:mb-32 mt-6 lg:mt-16 w-11/12 max-w-8xl mx-auto flex flex-col items-center gap-3 rounded-md py-12 px-2 font-inter">
+      <div className="bg-primary md:bg-[url('/trial-bg.svg')] bg-blend-multiply mb-12 md:mb-32 mt-6 lg:mt-16 w-11/12 max-w-8xl mx-auto flex flex-col items-center gap-3 rounded-xl py-12 px-2 font-inter">
         <h2 className="text-center text-white text-3xl md:text-5xl font-semibold my-2 font-gilroy">
           Try B<span className="text-[#917BFF] font-gilroy">o</span>npay Now
         </h2>
