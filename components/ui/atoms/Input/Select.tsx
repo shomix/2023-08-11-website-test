@@ -18,7 +18,7 @@ export default function SelectInput({
   options,
   id,
   inputClassName = 'border py-2 px-2 rounded-md text-slate-600',
-  containerClassName = 'flex flex-col mb-4',
+  containerClassName = 'flex flex-col mb-4 font-gilroy',
   labelClassName = 'mb-1 font-normal',
   onChange,
 }) {
