@@ -5,7 +5,7 @@ export default function HomeLayout({ children }) {
   return (
     <div>
       <Header />
-      <main className="py-20">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
