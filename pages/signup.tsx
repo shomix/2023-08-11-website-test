@@ -179,14 +179,14 @@ export default function Signup() {
   const businessContent = nextBusiness ? businessSecond : businessFirst;
 
   return (
-    <div className="font-gilroy w-[100vw]">
+    <div className="font-gilroy w-[100%]">
       <Image
         alt="DarkLogo"
         src={DarkLogo}
         className="h-[7em] mb-8 absolute left-[7rem]"
       />
-      <div className="flex flex-col  md:flex-row z-[-5] w-[100%] h-[100vh]">
-        <div className="flex lg:px-28 bg-[#3D3080] flex-col  w-[50%] h-[100%] px-6 md:px-10 text-white lg:px-14 items-center justify-center">
+      <div className="flex flex-col md:flex-row z-[-5] w-[100%] md:h-[100vh] ">
+        <div className="flex pt-[7em] pb-[4em] md:pb-0 md:pt-0 lg:px-28 bg-[#3D3080] flex-col w-[100%] md:w-[50%] h-[100%] px-6 md:px-10 text-white items-center justify-center">
           <div className="relative">
             <h1 className="text-[2em] z-20 font-bold font-gilroy">
               Welcome to Bonpay
@@ -338,7 +338,7 @@ export default function Signup() {
           </div>
         </div>
 
-        <div className="flex h-[100vh] items-center justify-center w-[50%] md:flex-1 md:h-screen bg-white md:flex-col py-5 pt-1 px-6 md:pt-0 md:px-10 z-[2]">
+        <div className="flex items-center pt-[3em] md:pt-0 justify-center w-[100%] md:w-[50%] md:flex-1 md:h-screen bg-white md:flex-col py-5  px-6 md:px-10 z-[2]">
           <div className="w-[100%] lg:px-28">
             {!isCreator && nextBusiness && (
               <div

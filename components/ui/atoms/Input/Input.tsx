@@ -19,7 +19,7 @@ export default function Input({
   id,
   required = true,
   inputClassName = 'border py-2 px-2 rounded-md',
-  containerClassName = 'flex flex-col mb-4',
+  containerClassName = 'flex flex-col mb-4 font-gilroy',
   labelClassName = 'mb-1 font-normal',
   onChange,
 }) {
