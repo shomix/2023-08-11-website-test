@@ -14,7 +14,7 @@ export default function RadioInput({
   label,
 }) {
   return (
-    <div className={containerClassName}>
+    <div className={`flex gap-1 ${containerClassName}`}>
       <input
         type="radio"
         checked={checked}

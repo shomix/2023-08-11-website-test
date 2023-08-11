@@ -183,7 +183,7 @@ export default function Signup() {
       <Image
         alt="DarkLogo"
         src={DarkLogo}
-        className="h-[7em] mb-8 absolute left-[7rem]"
+        className="h-[7em] mb-8 absolute left-[7rem] w-[9em]"
       />
       <div className="flex flex-col md:flex-row z-[-5] w-[100%] md:h-[100vh] ">
         <div className="flex pt-[7em] pb-[4em] md:pb-0 md:pt-0 lg:px-28 bg-[#3D3080] flex-col w-[100%] md:w-[50%] h-[100%] px-6 md:px-10 text-white items-center justify-center">
@@ -191,7 +191,7 @@ export default function Signup() {
             <h1 className="text-[2em] z-20 font-bold font-gilroy">
               Welcome to Bonpay
             </h1>
-            <p className=" font-gilroy font-light text-[0.9em] w-[80%] md:w-[100%] text-slate-200">
+            <p className=" font-gilroy text-[1em] w-[80%] md:w-[100%] text-slate-200">
               BonPay powers the new generation of businesses and help them reach
               new heights of profitability, admiration and love
             </p>
@@ -220,7 +220,7 @@ export default function Signup() {
                       }
                     : {}
                 }
-                className="flex cursor-pointer border rounded-lg py-3 border-slate-500 px-5 "
+                className="flex cursor-pointer border rounded-lg py-3 border-slate-500 px-5 h-[9em] md:h-auto"
               >
                 <CheckBoxInput styleProp={!isCreator} isChecked={isCreator} />
                 <div className="flex items-center w-full justify-between">
@@ -291,7 +291,7 @@ export default function Signup() {
                       }
                     : {}
                 }
-                className="flex cursor-pointer border border-slate-500 rounded-lg py-3 px-5 "
+                className="flex cursor-pointer border border-slate-500 rounded-lg py-3 px-5 h-[9em] md:h-auto"
               >
                 <CheckBoxInput styleProp={isCreator} isChecked={!isCreator} />
                 <div className="flex items-center w-full justify-between">
