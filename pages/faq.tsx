@@ -90,26 +90,26 @@ export default function Faq() {
         <section className="lg:max-w-4xl mx-auto text-center p-3 border rounded-lg max-w-[95%] my-20">
           <div className="border-b pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="What is BonPay Finance?"
+              content="BonPay Finance is a cutting-edge platform driving the Future of Payments. We offer a seamless, secure, and user-friendly experience that empowers businesses and creators to embrace Web3 payments. By revolutionizing the way transactions are conducted, we are fueling economic growth and paving the way for a new era of digital transactions."
             />
           </div>
           <div className="border-b py-2 pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="How does Bonpay finance work?"
+              content="Bonpay finance offers versatile payment solutions for Freelancers, Content creators, DAOs, and Businesses to easily receive crypto payments. Users can deploy any of our payment suites, including payment links, payment buttons, checkout options, and even our convenient QR code feature. These options provide seamless and secure ways to accept crypto payments for various transactions."
             />
           </div>
           <div className="border-b py-2 pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="Does Bonpay facilitate fiat payments for businesses?"
+              content="No, Bonpay exclusively supports Digital assets, including cryptocurrencies and NFTs, as the accepted means of payment. We provide a secure and streamlined platform for handling these digital transactions, ensuring seamless experiences for businesses and their customers in the world of digital assets."
             />
           </div>
           <div className="border-b py-2 pb-6">
             <Accordion
-              title="Lorem ipsum dolor sit amet consectetur adipisicing."
-              content={lorem}
+              title="How can I withdraw my USDC from Bonpay?"
+              content="Bonpay provides two convenient withdrawal options for your USDC funds. You can opt for a direct bank withdrawal, where the funds will be transferred to your bank account. Alternatively, you can choose the cash in option, which allows you to visit a bank in person and receive cash for your USDC. Both methods offer flexibility and ease of access to your funds, ensuring a seamless withdrawal experience."
             />
           </div>
           <div className="border-b py-2 pb-6">

@@ -24,7 +24,7 @@ export default function Button({
       disabled={isDisabled}
       onClick={onClick}
       type={isSubmit ? 'submit' : 'button'}
-      className={`${className} flex justify-center item-center`}
+      className={`hover:bg-[#473894] transition-all bg-[#6651D4] text-white w-full py-3 font-semibold rounded-lg ${className}`}
     >
       {isLoading ? <SpinnerIcon /> : children}
     </button>

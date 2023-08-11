@@ -9,6 +9,7 @@ export default function HomeLayout({ children }) {
       </div>
 
       <main className="py-20">{children}</main>
+
       <Footer />
     </div>
   );
