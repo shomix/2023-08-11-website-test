@@ -213,7 +213,7 @@ export default function Signup() {
                       }
                     : {}
                 }
-                className="flex cursor-pointer border rounded-lg py-3 border-slate-500 px-5 h-[9em] md:h-auto"
+                className="flex flex-row md:flex-row lg:flex-row items-center cursor-pointer border border-slate-500 rounded-lg py-3 px-5 h-[9em] md:h-auto"
               >
                 <CheckBoxInput styleProp={!isCreator} isChecked={isCreator} />
                 <div className="flex items-center w-full justify-between">
@@ -282,7 +282,7 @@ export default function Signup() {
                       }
                     : {}
                 }
-                className="flex cursor-pointer border border-slate-500 rounded-lg py-3 px-5 h-[9em] md:h-auto"
+                className="flex flex-row md:flex-row lg:flex-row items-center cursor-pointer border border-slate-500 rounded-lg py-3 px-5 h-[9em] md:h-auto"
               >
                 <CheckBoxInput styleProp={isCreator} isChecked={!isCreator} />
                 <div className="flex items-center w-full justify-between">
