@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import {
@@ -102,11 +103,11 @@ export default function Footer() {
             Follow Bonpay on social
           </h3>
           <div className="flex gap-6 w-fit m-auto md:m-0">
-            <Twitter />
-            <Instagram />
-            <Linkedin />
-            <Discord />
-            <Youtube />
+            <Image src={Twitter} alt="twitter" />
+            <Image src={Instagram} alt="instagram" />
+            <Image src={Linkedin} alt="linkedin" />
+            <Image src={Discord} alt="discord" />
+            <Image src={Youtube} alt="youtube" />
           </div>
         </div>
       </div>

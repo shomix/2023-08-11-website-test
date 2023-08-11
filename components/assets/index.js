@@ -33,24 +33,6 @@ import Book from './icons/book.svg';
 import Flag from './icons/flag.svg';
 import Tag from './icons/tag.svg';
 import Discord2 from './icons/discord-2.svg';
-import Document from './icons/document.svg';
-import Ellipse from './icons/Ellipse.svg';
-import Home from './icons/home.svg';
-import Like from './icons/like.svg';
-import Moneys from './icons/moneys.svg';
-import PersonalCard from './icons/personal.svg';
-import Receipt from './icons/receipt.svg';
-import Setting from './icons/setting-3.svg';
-import Status from './icons/status-up.svg';
-import Ticket from './icons/ticket.svg';
-import Layer from './icons/link.svg';
-import Send from './icons/money-send.svg';
-import LinkIcon from './icons/layer.svg';
-import Chain from './icons/chain.svg';
-import Left from './icons/left.svg';
-import Left2 from './icons/left-1.svg';
-import More from './icons/more.svg';
-import Edit from './icons/edit-2.svg';
 import Message from './icons/messages.svg';
 import CreatorList from './icons/creator-list.svg';
 import BusinessList from './icons/business-list.svg';
@@ -67,6 +49,7 @@ export { Frame4, Line6, messages2, tickCircle };
 export {
   PlusCircle,
   MinusCircle,
+  Messages,
   Twitter,
   Youtube,
   Linkedin,
@@ -75,30 +58,11 @@ export {
   Card,
   Code,
   Mobile,
-  Chain,
   Logo,
-  PersonalCard,
-  Ellipse,
-  Like,
-  Home,
-  Document,
-  Moneys,
-  LinkIcon,
-  Left,
-  Left2,
-  More,
-  Edit,
-  Send,
-  Layer,
-  Status,
-  Setting,
-  Receipt,
-  Ticket,
   Book,
   Flag,
   Tag,
   Discord2,
-  Messages,
   Message,
   CreatorList,
   BusinessList,
