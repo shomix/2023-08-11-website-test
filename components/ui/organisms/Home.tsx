@@ -35,9 +35,9 @@ export default function Home() {
     <div className="">
       <div className="bg-[url('/hero-bg/fourth.svg'),_url('/hero-bg/third.svg'),_url('/hero-bg/second.svg'),_url('/hero-bg/top.svg')] bg-[position:_right_0px_bottom_0px,_right_0px_bottom_0px,_right_0px_bottom_-120px,_right_0px_bottom_-50px] bg-[size:100%,100%,120%,cover] bg-no-repeat pt-20">
         <div className="flex flex-col items-center mb-20 w-11/12 max-w-8xl mx-auto">
-          <h2 className="font-gilroy text-3xl md:text-5xl max-w-2xl text-center font-bold">
+          <h2 className="font-gilroy text-3xl md:text-5xl max-w-2xl text-center font-semibold font-[400]">
             Web3 Payment Platform for{' '}
-            <span className="font-gilroy text-[#7B61FF]">
+            <span className="font-gilroy font-semibold  text-[#7B61FF]">
               Creators & Business
             </span>
           </h2>
@@ -55,6 +55,7 @@ export default function Home() {
           <span className="md:block font-gilroy text-3xl md:text-4xl">
             Seamless Global Payments:{' '}
           </span>
+          <br />
           <span className="md:block text-[#917BFF] font-gilroy text-3xl md:text-4xl">
             Effortlessly Transact Across Borders
           </span>
@@ -68,7 +69,7 @@ export default function Home() {
       </div>
       <div className="grid gap-12 md:gap-4 grid-cols-1 md:grid-cols-2 w-11/12 max-w-8xl mx-auto my-8 md:my-16">
         <div className="bg-[url('/wood-bg.svg')] bg-blend-multiply text-center md:text-left bg-[#FCFAFF] border border-[#E4DFFF] p-8 rounded-2xl">
-          <h3 className="font-gilroy font-bold text-[#101828] text-2xl md:text-3xl mb-3">
+          <h3 className="font-gilroy font-semibold text-[#101828] text-2xl md:text-3xl mb-3">
             Wallet Transfers
           </h3>
           <p className="text-[#101828] font-inter">
@@ -79,8 +80,8 @@ export default function Home() {
           </p>
         </div>
         <div className="bg-[url('/wood-bg.svg')] bg-blend-multiply text-center md:text-left bg-[#FCFAFF] border border-[#E4DFFF] p-8 rounded-2xl">
-          <h3 className="font-gilroy font-bold text-[#101828] text-2xl md:text-3xl mb-3">
-            Direct Transfers
+          <h3 className="font-gilroy font-semibold text-[#101828] text-2xl md:text-3xl mb-3">
+            Solana Pay
           </h3>
           <p className="text-[#101828] font-inter">
             Let&apos;s businesses easily connect with their customers' MetaMask
@@ -90,8 +91,8 @@ export default function Home() {
           </p>
         </div>
         <div className="bg-[url('/wood-bg.svg')] bg-blend-multiply text-center md:text-left bg-[#FCFAFF] border border-[#E4DFFF] p-8 rounded-2xl">
-          <h3 className="font-gilroy font-bold text-[#101828] text-2xl md:text-3xl mb-3">
-            Accept NFTs
+          <h3 className="font-gilroy font-semibold text-[#101828] text-2xl md:text-3xl mb-3">
+            Swap To Pay
           </h3>
           <p className="text-[#101828] font-inter">
             Let&apos;s businesses easily connect with their customers' MetaMask
@@ -101,7 +102,7 @@ export default function Home() {
           </p>
         </div>
         <div className="bg-[url('/wood-bg.svg')] bg-blend-multiply text-center md:text-left bg-[#FCFAFF] border border-[#E4DFFF] p-8 rounded-2xl">
-          <h3 className="font-gilroy font-bold text-[#101828] text-2xl md:text-3xl mb-3">
+          <h3 className="font-gilroy font-semibold text-[#101828] text-2xl md:text-3xl mb-3">
             Accept Stable Tokens
           </h3>
           <p className="text-[#101828] font-inter">
@@ -151,7 +152,7 @@ export default function Home() {
       </div>
       <div className="grid gap-4 grid-cols-2 w-11/12 max-w-8xl mx-auto">
         <div className="col-span-full bg-[url('/quote-bg-1.svg'),url('/quote-bg-2.svg')] bg-cover bg-center bg-blend-multiply bg-primary w-full max-w-8xl mx-auto flex items-center rounded-2xl p-3 md:p8 md:py-20 md:px-14">
-          <h2 className="text-white text-3xl md:text-5xl font-inter max-w-5xl font-semibold font-[Gilroy-Bold]">
+          <h2 className="text-white text-3xl md:text-5xl font-inter max-w-5xl font-semibold font-[Gilroy-Bold] p-6">
             We are the leading blockchain powered payment platform
           </h2>
         </div>
