@@ -13,7 +13,6 @@ module.exports = {
     extend: {
       fontFamily: {
         gilroy: ['var(--gilroy)'],
-        inter: 'var(--font-inter)',
         sans: 'var(--font-inter)',
       },
       colors: {

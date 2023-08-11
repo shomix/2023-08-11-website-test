@@ -3,9 +3,13 @@ import Header from '@/components/ui/organisms/Header';
 
 export default function HomeLayout({ children }) {
   return (
-    <div>
-      <Header />
-      <main>{children}</main>
+    <div className="relative ">
+      <div className="">
+        <Header />
+      </div>
+
+      <main className="py-20">{children}</main>
+
       <Footer />
     </div>
   );
