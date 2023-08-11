@@ -36,7 +36,7 @@ export default function Input({
         value={value}
         id={id}
         onChange={(e) => onChange(e, id)}
-        className={`border py-2 px-2 rounded-md placeholder:text-sm placeholder:font-[Inter] placeholder:font-light shadow-Input ${inputClassName}`}
+        className={`border py-2 px-2 rounded-md placeholder:text-sm placeholder:font-Inter placeholder:font-light shadow-Input ${inputClassName}`}
         type={type}
         placeholder={placeholder}
       />

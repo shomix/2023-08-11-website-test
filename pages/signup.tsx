@@ -81,7 +81,7 @@ export default function Signup() {
         value={formData.password}
       />
 
-      <p className="font-medium font-gilroy">Are you a software developer ?</p>
+      <p className="font-medium">Are you a software developer ?</p>
       <div className="flex gap-5 py-3">
         <RadioInput
           label={
@@ -103,36 +103,29 @@ export default function Signup() {
       <div className="flex gap-3 mt-3 mb-4 items-baseline">
         <CheckBoxInput isChecked={false} />
 
-        <div className="p-0 text-slate-600 font-gilroy">
+        <div className="p-0 text-slate-600">
           I consent to the collection and processing of my personal data in line
           with data regulations as described in the
-          <span className="font-semibold text-[#5241AA] font-gilroy">
-            {' '}
-            Privacy Policy
-          </span>
+          <span className="font-semibold text-[#5241AA]"> Privacy Policy</span>
         </div>
       </div>
 
       <Button onClick={handleSubmit}>Create Account</Button>
-      <p className="w-[80%] mt-4 mx-auto text-slate-600 text-center font-gilroy">
+      <p className="lg:w-[80%] mt-4 mx-auto text-slate-600 text-center">
         By clicking “Create Account” button, you agree to Bonpay’s <br />
-        <span className="text-[#5241AA] font-semibold font-gilroy">
-          Terms of use.
-        </span>
+        <span className="text-[#5241AA] font-semibold">Terms of use.</span>
       </p>
 
-      <p className="text-center mt-5 text-slate-600 font-gilroy">
+      <p className="text-center mt-8 text-[15px] text-slate-600">
         Already have an account?{' '}
-        <span className="font-semibold text-[#5241AA] font-gilroy">
-          SIGN IN
-        </span>
+        <span className="font-semibold text-[#5241AA]">SIGN IN</span>
       </p>
     </div>
   );
 
   // First Business Section Content
   const businessFirst = (
-    <div className="text-[1em] font-[Inter]">
+    <div className="text-[1em]">
       <Input
         text="Legal Business Name"
         placeholder="Business name"
@@ -183,24 +176,24 @@ export default function Signup() {
       <Image
         alt="DarkLogo"
         src={DarkLogo}
-        className="h-[7em] mb-8 absolute left-[7rem] w-[9em]"
+        className="h-[7em] mb-8 absolute left-[1.2rem] md:left-[7rem] w-[9em]"
       />
       <div className="flex flex-col md:flex-row z-[-5] w-[100%] md:h-[100vh] ">
         <div className="flex pt-[7em] pb-[4em] md:pb-0 md:pt-0 lg:px-28 bg-[#3D3080] flex-col w-[100%] md:w-[50%] h-[100%] px-6 md:px-10 text-white items-center justify-center">
           <div className="relative">
-            <h1 className="text-[2em] z-20 font-bold font-gilroy">
+            <h1 className="text-[2em] z-20 font-bold mb-2">
               Welcome to Bonpay
             </h1>
-            <p className=" font-gilroy text-[1em] w-[80%] md:w-[100%] text-slate-200">
-              BonPay powers the new generation of businesses and help them reach
+            <p className="text-[1em] w-[90%] md:w-[100%] text-slate-200 font-[400]">
+              Bonpay powers the new generation of businesses and help them reach
               new heights of profitability, admiration and love
             </p>
 
             <hr className="mt-12 mb-9 border-[#6d6b75] border-[0.1px]" />
 
-            <h2 className="font-bold mb-7  text-[1.2em] font-gilroy">
-              How would you like to use BonPay ?
-            </h2>
+            <p className="font-[600] mb-7  text-[1.2em]">
+              How would you like to use BonPay?
+            </p>
             <div className="gap-5 flex flex-col">
               <div
                 onClick={() => switchSection('creator')}
@@ -225,9 +218,7 @@ export default function Signup() {
                 <CheckBoxInput styleProp={!isCreator} isChecked={isCreator} />
                 <div className="flex items-center w-full justify-between">
                   <div className="pl-4">
-                    <h3 className="font-semibold text-[1.2em] pb-1 font-gilroy">
-                      Creator
-                    </h3>
+                    <p className="text-[1.2em] pb-1">Creator</p>
                     <ul
                       style={isCreator ? { color: 'black' } : {}}
                       className="text-[0.9em] text-slate-200 list-inside font-gilroy "
@@ -235,7 +226,7 @@ export default function Signup() {
                       <li
                         className={
                           isCreator
-                            ? 'custom-list-bullet-active pt-1 ml-6 font-semibold'
+                            ? 'custom-list-bullet-active pt-1 ml-6 '
                             : 'custom-list-bullet pt-1 ml-6 font-light'
                         }
                       >
@@ -244,7 +235,7 @@ export default function Signup() {
                       <li
                         className={
                           isCreator
-                            ? 'custom-list-bullet-active pt-1 ml-6 font-semibold'
+                            ? 'custom-list-bullet-active pt-1 ml-6 '
                             : 'custom-list-bullet pt-1 ml-6 font-light'
                         }
                       >
@@ -253,7 +244,7 @@ export default function Signup() {
                       <li
                         className={
                           isCreator
-                            ? 'custom-list-bullet-active pt-1 ml-6 font-semibold'
+                            ? 'custom-list-bullet-active pt-1 ml-6 '
                             : 'custom-list-bullet pt-1 ml-6 font-light'
                         }
                       >
@@ -264,8 +255,8 @@ export default function Signup() {
                   <div
                     className={
                       isCreator
-                        ? 'bg-[#E4DFFF] p-4 rounded-lg scale-75 md:scale-100 '
-                        : 'bg-[#F9F5FF] p-4 rounded-lg scale-75 md:scale-100 '
+                        ? 'bg-[#E4DFFF] p-4 rounded-2xl scale-75 md:scale-100 '
+                        : 'bg-[#F9F5FF] p-4 rounded-2xl scale-75 md:scale-100 '
                     }
                   >
                     <Image src={CreatorIcon} alt="creator_icon" />
@@ -296,9 +287,7 @@ export default function Signup() {
                 <CheckBoxInput styleProp={isCreator} isChecked={!isCreator} />
                 <div className="flex items-center w-full justify-between">
                   <div className=" pl-4">
-                    <h3 className="font-semibold text-[1.2em] pb-1 font-gilroy">
-                      Business
-                    </h3>
+                    <p className=" text-[1.2em] pb-1">Business</p>
                     <ul
                       style={!isCreator ? { color: 'black' } : {}}
                       className="text-[0.9em] text-slate-200 list-inside relative"
@@ -306,7 +295,7 @@ export default function Signup() {
                       <li
                         className={
                           !isCreator
-                            ? 'custom-list-bullet-active pt-1 ml-6 font-semibold'
+                            ? 'custom-list-bullet-active pt-1 ml-6 '
                             : 'custom-list-bullet pt-1 ml-6 font-light'
                         }
                       >
@@ -315,7 +304,7 @@ export default function Signup() {
                       <li
                         className={
                           !isCreator
-                            ? 'custom-list-bullet-active pt-1 ml-6 font-semibold'
+                            ? 'custom-list-bullet-active pt-1 ml-6 '
                             : 'custom-list-bullet pt-1 ml-6 font-light'
                         }
                       >
@@ -326,8 +315,8 @@ export default function Signup() {
                   <div
                     className={
                       !isCreator
-                        ? 'bg-[#E4DFFF] p-4 rounded-lg scale-75 md:scale-100 '
-                        : 'bg-[#F9F5FF] p-4 rounded-lg scale-75 md:scale-100 '
+                        ? 'bg-[#E4DFFF] p-4 rounded-2xl scale-75 md:scale-100 '
+                        : 'bg-[#F9F5FF] p-4 rounded-2xl scale-75 md:scale-100 '
                     }
                   >
                     <Image src={BusinessIcon} alt="business_icon" />
@@ -356,11 +345,11 @@ export default function Signup() {
               </div>
             )}
 
-            <h1 className="text-[1.8em] text-[#6651D4] font-semibold pb-4 font-gilroy">
+            <h1 className="text-[1.8em] text-[#6651D4] pb-4 font-[600]">
               Create new account
             </h1>
 
-            <form className="text-[0.9em] pb-10 md:pb-0">
+            <form className="text-[0.9em] pb-10 md:pb-0 font-[Inter]">
               {isCreator ? creatorContent : businessContent}
             </form>
           </div>
