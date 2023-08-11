@@ -181,7 +181,7 @@ export default function Signup() {
       <div className="flex flex-col md:flex-row z-[-5] w-[100%] md:h-[100vh] ">
         <div className="flex pt-[7em] pb-[4em] md:pb-0 md:pt-0 lg:px-28 bg-[#3D3080] flex-col w-[100%] md:w-[50%] h-[100%] px-6 md:px-10 text-white items-center justify-center">
           <div className="relative">
-            <h1 className="text-[2em] z-20 font-bold mb-2">
+            <h1 className="text-[2em] z-20 font-bold mb-2 font-gilroy">
               Welcome to Bonpay
             </h1>
             <p className="text-[1em] w-[90%] md:w-[100%] text-slate-200 font-[400]">
@@ -345,7 +345,7 @@ export default function Signup() {
               </div>
             )}
 
-            <h1 className="text-[1.8em] text-[#6651D4] pb-4 font-[600]">
+            <h1 className="text-[1.8em] text-[#6651D4] pb-4 font-[600] font-gilroy">
               Create new account
             </h1>
 
