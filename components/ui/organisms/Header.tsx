@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   // Card,
@@ -202,11 +203,8 @@ export default function Header() {
     <nav className=" absolute marker:flex justify-between w-[100%] p-4 max-md-[765px]:p-0 ">
       <div className="container mx-auto md:flex md:justify-between md:items-center max-md-[765px]:p-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl text-black font-semibold cursor-pointer ">
-            <Link href="/">
-              {' '}
-              <Logo />
-            </Link>
+          <div className="text-xl text-black font-semibold">
+            <Image src={Logo} alt="logo" />
           </div>
           <div className="md:hidden">
             <button
@@ -214,65 +212,33 @@ export default function Header() {
               type="button"
               className="text-black hover:text-gray-400 focus:outline-none"
             >
-              {isMenuOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M9.16998 14.8299L14.83 9.16992"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    // strokeOnLoadinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M14.83 14.8299L9.16998 9.16992"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  width="24"
-                  height="25"
-                  viewBox="0 0 24 25"
-                  className="h-6 w-6 fill-current"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 7.0376H21"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M3 12.0376H21"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M3 17.0376H21"
-                    stroke="#292D32"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              )}
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                className="h-6 w-6 fill-current"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 7.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M3 12.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M3 17.0376H21"
+                  stroke="#292D32"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
             </button>
           </div>
         </div>
