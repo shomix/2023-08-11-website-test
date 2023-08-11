@@ -11,7 +11,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check",
     "test": "echo tested",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:build": "next build && next export && cat ./out/index.html"
   },
   "dependencies": {
     "@cypress/react": "^7.0.3",
