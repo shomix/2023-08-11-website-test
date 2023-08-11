@@ -10,6 +10,7 @@ import {
   LinkIcon,
   Layer,
 } from '@/components/assets';
+import Modal from '@/components/ui/molecules/Popupmodal';
 
 const data = [
   {
@@ -900,6 +901,15 @@ function Links() {
 }
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <DashboardLayout>
       <div className=" relative bg-[#F9FAFB] h-[1300px]  pt-0  overflow-x-scroll w-full">
@@ -911,7 +921,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className=" bg-[#7B61FF] my-2 text-white text-[14px] cursor-pointer max-w-[204px] py-1 px-2 rounded-lg flex items-center">
+          <button
+            onClick={openModal}
+            type="button"
+            className=" bg-[#7B61FF] my-2 text-white text-[14px] cursor-pointer max-w-[204px] py-1 px-2 rounded-lg flex items-center"
+          >
             <svg
               width="18"
               height="18"
@@ -935,7 +949,10 @@ export default function Home() {
               />
             </svg>
             Create Payment Links
-          </div>
+          </button>
+          <Modal isOpen={isModalOpen} onClose={closeModal}>
+            <div>Children here</div>
+          </Modal>
         </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-1 p-6 ">
