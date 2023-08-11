@@ -41,15 +41,15 @@ export default function Signin() {
               type="email"
               placeholder="Email Address"
               id="email"
-              labelClassName="font-[500] mb-1 text-[#1D2939]"
+              labelClassName="text-[#1D2939]"
               value={formData.email}
               onChange={updateForm}
             />
             <Input
               text={
-                <p className="font-gilroy font-normal flex">
+                <p className="flex">
                   Password{' '}
-                  <span className="font-gilroy ml-auto text-primary font-semibold">
+                  <span className="ml-auto text-xs text-primary font-normal">
                     Forgot your password?
                   </span>
                 </p>
@@ -57,7 +57,7 @@ export default function Signin() {
               type="password"
               placeholder="Password"
               id="password"
-              labelClassName="font-[500] mb-1 text-[#1D2939]"
+              labelClassName="text-[#1D2939]"
               value={formData.password}
               onChange={updateForm}
             />
@@ -67,14 +67,14 @@ export default function Signin() {
                 isChecked={staySigned}
                 onClick={updateSignedIn}
               />
-              <p className="font-gilroy">Stay signed In</p>
+              <p className="text-sm text-[#667085]">Stay signed In</p>
             </div>
           </div>
-          <Button className="bg-[#7B61FF]">Continue</Button>
-          <p className="mx-auto mt-6 font-gilroy text-slate-600 font-[500]">
+          <Button className="bg-[#7B61FF] my-6">Continue</Button>
+          <p className="mx-auto mt-6  text-[#667085] text-sm font-[500]">
             New to Bonpay?{' '}
             <Link href="/signup">
-              <span className=" text-purple-500 font-gilroy">Signup</span>
+              <span className="text-primary">Signup</span>
             </Link>
           </p>
         </div>

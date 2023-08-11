@@ -24,8 +24,11 @@ export default function Input({
   onChange,
 }) {
   return (
-    <div className={`flex flex-col mb-4 font-gilroy ${containerClassName}`}>
-      <label htmlFor={id} className={`mb-1 font-normal ${labelClassName}`}>
+    <div className={`flex flex-col mt-2 mb-6 ${containerClassName}`}>
+      <label
+        htmlFor={id}
+        className={`font-[500] mb-1 text-[14px] ${labelClassName}`}
+      >
         {text}
       </label>
       <input
@@ -33,7 +36,7 @@ export default function Input({
         value={value}
         id={id}
         onChange={(e) => onChange(e, id)}
-        className={`border py-2 px-2 rounded-md ${inputClassName}`}
+        className={`border py-2 px-2 rounded-md placeholder:text-sm placeholder:font-[Inter] placeholder:font-light shadow-Input ${inputClassName}`}
         type={type}
         placeholder={placeholder}
       />
